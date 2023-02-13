@@ -15,12 +15,12 @@ public class PessoaJuridica implements Entidade {
                 '}';
     }
 
-    public String getNome() {
-        return nome;
-    }
-
     @Override
     public String getID() {
         return numeroCNPJ;
+    }
+
+    public String getNome() {
+        return nome;
     }
 }

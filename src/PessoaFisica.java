@@ -15,12 +15,12 @@ public class PessoaFisica implements Entidade {
                 '}';
     }
 
-    public String getNome() {
-        return nome;
-    }
-
     @Override
     public String getID() {
         return numeroCPF;
+    }
+
+    public String getNome() {
+        return nome;
     }
 }
