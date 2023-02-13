@@ -7,6 +7,14 @@ public class PessoaFisica implements Entidade {
         this.numeroCPF = numeroCPF;
     }
 
+    @Override
+    public String toString() {
+        return "PessoaFisica{" +
+                "nome='" + nome + '\'' +
+                ", numeroCPF='" + numeroCPF + '\'' +
+                '}';
+    }
+
     public String getNome() {
         return nome;
     }

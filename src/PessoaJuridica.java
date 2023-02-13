@@ -7,6 +7,14 @@ public class PessoaJuridica implements Entidade {
         this.numeroCNPJ = numeroCPNJ;
     }
 
+    @Override
+    public String toString() {
+        return "PessoaJuridica{" +
+                "nome='" + nome + '\'' +
+                ", numeroCNPJ='" + numeroCNPJ + '\'' +
+                '}';
+    }
+
     public String getNome() {
         return nome;
     }

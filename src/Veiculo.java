@@ -10,6 +10,15 @@ public class Veiculo implements Entidade {
     }
 
     @Override
+    public String toString() {
+        return "Veiculo{" +
+                "fabricante='" + fabricante + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", placa='" + placa + '\'' +
+                '}';
+    }
+
+    @Override
     public String getID() {
         return placa;
     }
