@@ -1,7 +1,8 @@
-public class PessoaFisica {
+public class PessoaFisica implements Entidade {
     private String numeroCPF;
 
-    public String getNumeroCPF() {
+    @Override
+    public String getID() {
         return numeroCPF;
     }
 }

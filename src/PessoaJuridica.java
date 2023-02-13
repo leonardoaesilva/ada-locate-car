@@ -1,7 +1,8 @@
-public class PessoaJuridica {
+public class PessoaJuridica implements Entidade {
     private String numeroCNPJ;
 
-    public String getNumeroCNPJ() {
+    @Override
+    public String getID() {
         return numeroCNPJ;
     }
 }
