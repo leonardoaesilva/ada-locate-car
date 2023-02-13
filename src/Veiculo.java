@@ -3,6 +3,12 @@ public class Veiculo implements Entidade {
     private String modelo;
     private String placa;
 
+    public Veiculo(String fabricante, String modelo, String placa) {
+        this.fabricante = fabricante;
+        this.modelo = modelo;
+        this.placa = placa;
+    }
+
     @Override
     public String getID() {
         return placa;
