@@ -1,6 +1,18 @@
 public class Veiculo implements Entidade {
+    private String fabricante;
+    private String modelo;
+    private String placa;
+
     @Override
     public String getID() {
-        return null;
+        return placa;
+    }
+
+    public String getFabricante() {
+        return fabricante;
+    }
+
+    public String getModelo() {
+        return modelo;
     }
 }
