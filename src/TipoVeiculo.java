@@ -1,13 +1,17 @@
+import java.math.BigDecimal;
+
 public enum TipoVeiculo {
-    PEQUENO(100d), MEDIO(150d), SUV(200d);
+    Pequeno(new BigDecimal(100)),
+    Médio(new BigDecimal(150)),
+    SUV(new BigDecimal(200));
 
-    public Double valorAluguelDiario;
+    public BigDecimal valorAluguelDiario;
 
-    TipoVeiculo(Double valorAluguelDiario) {
+    TipoVeiculo(BigDecimal valorAluguelDiario) {
         this.valorAluguelDiario = valorAluguelDiario;
     }
 
-    public Double getValorAluguelDiario() {
+    public BigDecimal getValorAluguelDiario() {
         return valorAluguelDiario;
     }
 }

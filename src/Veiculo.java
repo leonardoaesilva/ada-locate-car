@@ -3,12 +3,14 @@ public class Veiculo implements Entidade {
     private String modelo;
     private String pinturaCor;
     private String placa;
+    private TipoVeiculo tipoVeiculo;
 
-    public Veiculo(String fabricante, String modelo, String pinturaCor, String placa) {
+    public Veiculo(String fabricante, String modelo, String pinturaCor, String placa, TipoVeiculo tipoVeiculo) {
         this.fabricante = fabricante;
         this.modelo = modelo;
         this.pinturaCor = pinturaCor;
         this.placa = placa;
+        this.tipoVeiculo = tipoVeiculo;
     }
 
     @Override
@@ -18,6 +20,8 @@ public class Veiculo implements Entidade {
                 ", modelo='" + modelo + '\'' +
                 ", pinturaCor='" + pinturaCor + '\'' +
                 ", placa='" + placa + '\'' +
+                ", tipoVeiculo=" + tipoVeiculo +
+                ", valorAluguelDiario=" + tipoVeiculo.getValorAluguelDiario() +
                 '}';
     }
 

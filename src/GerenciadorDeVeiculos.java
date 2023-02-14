@@ -7,11 +7,11 @@ public class GerenciadorDeVeiculos {
         this.dadosDeLivros = dadosDeLivros;
     }
 
-    public Veiculo adcVeiculo(String fabricante, String modelo, String pinturaCor, String placa) {
+    public Veiculo adcVeiculo(String fabricante, String modelo, String pinturaCor, String placa, TipoVeiculo tipoVeiculo) {
         if (existeVeiculo(placa))
             throw new IllegalArgumentException("Um veículo com a mesma placa já está cadastrado na base.");
 
-        Veiculo novoVeiculo = new Veiculo(fabricante, modelo, pinturaCor, placa);
+        Veiculo novoVeiculo = new Veiculo(fabricante, modelo, pinturaCor, placa, tipoVeiculo);
         dadosDeLivros.salvar(novoVeiculo);
 
         return novoVeiculo;

@@ -8,9 +8,7 @@ public class Locadora {
         GerenciadorDeClientesJuridicos clientesJuridicos = new GerenciadorDeClientesJuridicos(bancoDeClientesJuridicos);
         GerenciadorDeVeiculos veiculos = new GerenciadorDeVeiculos(bancoDeVeiculos);
 
-        clientesFisicos.adcCliente("Leo", "123");
-        System.out.println(clientesFisicos.listarTodos());
-
-        System.out.println("Hello world!");
+        veiculos.adcVeiculo("Ford", "KA", "Vermelho", "ASO9021", TipoVeiculo.Pequeno);
+        System.out.println(veiculos.listarTodos());
     }
 }
