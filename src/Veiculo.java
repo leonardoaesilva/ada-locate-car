@@ -20,8 +20,8 @@ public class Veiculo implements Entidade {
                 ", modelo='" + modelo + '\'' +
                 ", pinturaCor='" + pinturaCor + '\'' +
                 ", placa='" + placa + '\'' +
-                ", tipoVeiculo=" + tipoVeiculo +
-                ", valorAluguelDiario=" + tipoVeiculo.getValorAluguelDiario() +
+                ", tipoVeiculo='" + tipoVeiculo + '\'' +
+                ", valorAluguelDiario='R$" + tipoVeiculo.getValorAluguelDiario() + '\'' +
                 '}';
     }
 
