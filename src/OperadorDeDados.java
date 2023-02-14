@@ -4,7 +4,7 @@ import java.util.List;
 public class OperadorDeDados<T extends Entidade> implements BancoDeDados<T> {
     private final List<T> dados;
 
-    public OperadorDeDados(List<T> dados) {
+    public OperadorDeDados() {
         this.dados = new ArrayList<>();
     }
 
