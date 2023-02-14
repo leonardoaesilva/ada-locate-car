@@ -1,16 +1,15 @@
-public class PessoaJuridica implements Entidade {
-    private String nome;
+public class PessoaJuridica extends Cliente {
     private String numeroCNPJ;
 
-    public PessoaJuridica(String nome, String numeroCPNJ) {
-        this.nome = nome;
-        this.numeroCNPJ = numeroCPNJ;
+    public PessoaJuridica(String nome, String numeroCNPJ) {
+        super(nome);
+        this.numeroCNPJ = numeroCNPJ;
     }
 
     @Override
     public String toString() {
         return "PessoaJuridica{" +
-                "nome='" + nome + '\'' +
+                "nome='" + this.getNome() + '\'' +
                 ", numeroCNPJ='" + numeroCNPJ + '\'' +
                 '}';
     }
@@ -18,9 +17,5 @@ public class PessoaJuridica implements Entidade {
     @Override
     public String getID() {
         return numeroCNPJ;
-    }
-
-    public String getNome() {
-        return nome;
     }
 }

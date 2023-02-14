@@ -1,18 +1,9 @@
-public class PessoaFisica implements Entidade {
-    private String nome;
+public class PessoaFisica extends Cliente {
     private String numeroCPF;
 
     public PessoaFisica(String nome, String numeroCPF) {
-        this.nome = nome;
+        super(nome);
         this.numeroCPF = numeroCPF;
-    }
-
-    @Override
-    public String toString() {
-        return "PessoaFisica{" +
-                "nome='" + nome + '\'' +
-                ", numeroCPF='" + numeroCPF + '\'' +
-                '}';
     }
 
     @Override
@@ -20,7 +11,11 @@ public class PessoaFisica implements Entidade {
         return numeroCPF;
     }
 
-    public String getNome() {
-        return nome;
+    @Override
+    public String toString() {
+        return "PessoaFisica{" +
+                "nome='" + this.getNome() + '\'' +
+                "numeroCPF='" + numeroCPF + '\'' +
+                '}';
     }
 }
