@@ -1,5 +1,5 @@
 public class Veiculo implements Entidade {
-    private Boolean locado;
+    private Boolean isLocado;
     private String fabricante;
     private String modelo;
     private String pinturaCor;
@@ -7,7 +7,7 @@ public class Veiculo implements Entidade {
     private TipoVeiculo tipoVeiculo;
 
     public Veiculo(String fabricante, String modelo, String pinturaCor, String placa, TipoVeiculo tipoVeiculo) {
-        this.locado = false;
+        this.isLocado = false;
         this.fabricante = fabricante;
         this.modelo = modelo;
         this.pinturaCor = pinturaCor;
@@ -24,6 +24,7 @@ public class Veiculo implements Entidade {
                 ", placa='" + placa + '\'' +
                 ", tipoVeiculo='" + tipoVeiculo + '\'' +
                 ", valorAluguelDiario='R$" + tipoVeiculo.getValorAluguelDiario() + '\'' +
+                ", alugado='" + isLocado + '\'' +
                 '}';
     }
 
@@ -32,12 +33,12 @@ public class Veiculo implements Entidade {
         return placa;
     }
 
-    public Boolean getLocado() {
-        return locado;
+    public Boolean getIsLocado() {
+        return isLocado;
     }
 
-    public void setLocado(Boolean locado) {
-        this.locado = locado;
+    public void setIsLocado(Boolean isLocado) {
+        this.isLocado = isLocado;
     }
 
     public String getFabricante() {
