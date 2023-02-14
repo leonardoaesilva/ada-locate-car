@@ -7,15 +7,15 @@ public class PessoaFisica extends Cliente {
     }
 
     @Override
-    public String getID() {
-        return numeroCPF;
+    public String toString() {
+        return "PessoaFisica{" +
+                "nome='" + super.getNome() + '\'' +
+                ", numeroCPF='" + numeroCPF + '\'' +
+                '}';
     }
 
     @Override
-    public String toString() {
-        return "PessoaFisica{" +
-                "nome='" + this.getNome() + '\'' +
-                "numeroCPF='" + numeroCPF + '\'' +
-                '}';
+    public String getID() {
+        return numeroCPF;
     }
 }
