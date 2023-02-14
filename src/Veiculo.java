@@ -1,4 +1,5 @@
 public class Veiculo implements Entidade {
+    private Boolean locado;
     private String fabricante;
     private String modelo;
     private String pinturaCor;
@@ -6,6 +7,7 @@ public class Veiculo implements Entidade {
     private TipoVeiculo tipoVeiculo;
 
     public Veiculo(String fabricante, String modelo, String pinturaCor, String placa, TipoVeiculo tipoVeiculo) {
+        this.locado = false;
         this.fabricante = fabricante;
         this.modelo = modelo;
         this.pinturaCor = pinturaCor;
@@ -28,6 +30,14 @@ public class Veiculo implements Entidade {
     @Override
     public String getID() {
         return placa;
+    }
+
+    public Boolean getLocado() {
+        return locado;
+    }
+
+    public void setLocado(Boolean locado) {
+        this.locado = locado;
     }
 
     public String getFabricante() {
