@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciadorDeVeiculos {
@@ -21,15 +22,25 @@ public class GerenciadorDeVeiculos {
         if (!existeVeiculo(placa))
             throw new IllegalArgumentException("Veículo não encontrado na base de dados.");
 
-        Veiculo veiculoEditado = buscarVeiculo(placa);
+        Veiculo veiculoEditado = buscarVeiculoExato(placa);
         veiculoEditado.setPinturaCor(pinturaCor);
         dadosDeLivros.atualizar(veiculoEditado);
 
         return veiculoEditado;
     }
 
-    public Veiculo buscarVeiculo(String placa) {
+    public Veiculo buscarVeiculoExato(String placa) {
         return dadosDeLivros.consultar(placa);
+    }
+
+    public List<Veiculo> buscarModeloVeiculos(String busca) {
+        List<Veiculo> veiculosPorModelo = new ArrayList<>();
+
+        for (Veiculo v : listarTodos())
+            if (v.getModelo().contains(busca))
+                veiculosPorModelo.add(v);
+
+        return veiculosPorModelo;
     }
 
     public boolean existeVeiculo(String placa) {
