@@ -9,7 +9,7 @@ public class PessoaJuridica extends Cliente {
     @Override
     public String toString() {
         return "PessoaJuridica{" +
-                "nome='" + this.getNome() + '\'' +
+                "nome='" + super.getNome() + '\'' +
                 ", numeroCNPJ='" + numeroCNPJ + '\'' +
                 '}';
     }
