@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class BDEmMemoria <T extends Entidade> implements BancoDeDados<T> {
+public class OperadorDeDados<T extends Entidade> implements BancoDeDados<T> {
     private final List<T> dados;
 
-    public BDEmMemoria(List<T> dados) {
+    public OperadorDeDados(List<T> dados) {
         this.dados = new ArrayList<>();
     }
 
