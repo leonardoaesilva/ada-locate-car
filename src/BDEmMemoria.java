@@ -24,6 +24,7 @@ public class BDEmMemoria <T extends Entidade> implements BancoDeDados<T> {
             throw new IllegalArgumentException("Entidade já existente com tal identificador.");
 
         dados.add(entidade);
+
         return entidade;
     }
 
