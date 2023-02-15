@@ -33,3 +33,5 @@ Criar uma aplicação que gerencie o aluguel de veículos, onde cada item abaixo
 > _**Generics**_ por sua vez foi um conceito que, apesar de fazer bastante sentido, levou um tempo para compreender e colocar em prática.
 > Por fim, os _**Princípios SOLID**_, além de demandarem muita prática, muitas vezes não fazem sentido para mim, o que dificultou a prática no projeto, ainda que muito do código seja copiado do próprio professor.
 > Porém o fator decisivo que dificultou minha aprendizagem nesse módulo, foi minha baixa participação e má organização de tempo, para essa atividade principalmente.
+
+> Ah, e eu deixei pra reorganizar por pacotes depois que terminasse o projeto mas não tô confiando no _refactor_ do programa então ficou essa bagunça. Desculpa :)
