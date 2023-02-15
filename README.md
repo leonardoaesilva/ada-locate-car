@@ -8,7 +8,7 @@ Criar uma aplicação que gerencie o aluguel de veículos, onde cada item abaixo
 - [x] Cadastrar o cliente (pessoa física e jurídica)
 - [x] Alterar o cliente (pessoa física e jurídica)
 - [x] Alugar um veículo para pessoa física e jurídica;
-- [ ] Devolver um veículo para pessoa física e jurídica;
+- [x] Devolver um veículo para pessoa física e jurídica;
 
 ### Regras de negócio
 1. RN1: Os veículos não podem ser repetidos; Pode utilizar a placa como identificador de unicidade;
