@@ -1,5 +1,6 @@
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Aluguel implements InterfaceEntidade, Serializable {
     private static final Long serialVersionUID = 1L;
@@ -19,8 +20,8 @@ public class Aluguel implements InterfaceEntidade, Serializable {
     public String toString() {
         return "Aluguel{" +
                 "cliente=" + cliente.getNome() +
-                ", dataAluguel=" + dataAluguel +
-                ", dataDevolucao=" + dataDevolucao +
+                ", dataAluguel=" + dataAluguel.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")) +
+                ", dataDevolucao=" + dataDevolucao.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")) +
                 ", veiculo=" + veiculo +
                 '}';
     }

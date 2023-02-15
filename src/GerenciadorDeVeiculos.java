@@ -54,4 +54,15 @@ public class GerenciadorDeVeiculos {
     public List<Veiculo> listarTodos() {
         return dadosDeVeiculos.listarTodos();
     }
+
+    public List<Veiculo> listarDisponiveis() {
+        List<Veiculo> veiculosDisponiveis = new ArrayList<>();
+
+        for (Veiculo v : listarTodos()) {
+            if (!v.getIsAlugado())
+                veiculosDisponiveis.add(v);
+        }
+
+        return veiculosDisponiveis;
+    }
 }
