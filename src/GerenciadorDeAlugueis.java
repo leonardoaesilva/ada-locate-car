@@ -20,16 +20,20 @@ public class GerenciadorDeAlugueis {
         return novoAluguel;
     }
 
-    public Aluguel devolverVeiculo(Cliente cliente, LocalDateTime dataAluguel, LocalDateTime dataDevolucao, Veiculo veiculo) {
-        if (!veiculo.getIsAlugado())
+    public Aluguel devolverVeiculo(Aluguel aluguel) {
+        if (!aluguel.getVeiculo().getIsAlugado())
             throw new IllegalStateException("Veículo não alugado.");
 
-        Aluguel veiculoADevolver = dadosVeiculosAlugados.consultar(veiculo.getID());
+        Aluguel veiculoADevolver = buscarRegistroAluguel(aluguel.getID());
         veiculoADevolver.getVeiculo().setIsAlugado(false);
         dadosVeiculosAlugados.deletar(veiculoADevolver.getVeiculo().getID());
-        calcularValorAluguel(cliente, dataAluguel, dataDevolucao, veiculo);
+        calcularValorAluguel(aluguel.getCliente(), aluguel.getDataAluguel(), aluguel.getDataDevolucao(), aluguel.getVeiculo());
 
         return veiculoADevolver;
+    }
+
+    private Aluguel buscarRegistroAluguel(String id) {
+        return dadosVeiculosAlugados.consultar(id);
     }
 
     private BigDecimal calcularValorAluguel(Cliente cliente, LocalDateTime dataAluguel, LocalDateTime dataDevolucao, Veiculo veiculo) {

@@ -36,10 +36,7 @@ public class Locadora {
         System.out.println("################# VEÍCULOS DISPONÍVEIS PARA ALUGUEL");
         veiculos.listarDisponiveis().forEach(System.out::println);
 
-        alugueis.devolverVeiculo(clientesFisicos.buscarCliente("123"),
-                LocalDateTime.of(1997, Month.MAY, 13, 18, 30),
-                LocalDateTime.of(1997, Month.MAY, 18, 18, 30),
-                veiculos.buscarVeiculoExato("ASO9021"));
+        alugueis.devolverVeiculo(alugueis.listarTodos().get(0));
 
         System.out.println("################# VEÍCULOS DISPONÍVEIS PARA ALUGUEL");
         veiculos.listarDisponiveis().forEach(System.out::println);
