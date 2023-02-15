@@ -1,4 +1,4 @@
-public abstract class Cliente implements Entidade {
+public abstract class Cliente implements EntidadeInterface {
     private String nome;
 
     public Cliente(String nome) {

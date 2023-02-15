@@ -1,4 +1,4 @@
-public class Veiculo implements Entidade {
+public class Veiculo implements EntidadeInterface {
     private Boolean isLocado;
     private String fabricante;
     private String modelo;

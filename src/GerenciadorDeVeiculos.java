@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciadorDeVeiculos {
-    private final BancoDeDados<Veiculo> dadosDeLivros;
+    private final BancoDeDadosInterface<Veiculo> dadosDeVeiculos;
 
-    public GerenciadorDeVeiculos(BancoDeDados<Veiculo> dadosDeLivros) {
-        this.dadosDeLivros = dadosDeLivros;
+    public GerenciadorDeVeiculos(BancoDeDadosInterface<Veiculo> dadosDeVeiculos) {
+        this.dadosDeVeiculos = dadosDeVeiculos;
     }
 
     public Veiculo adcVeiculo(String fabricante, String modelo, String pinturaCor, String placa, TipoVeiculo tipoVeiculo) {
@@ -13,7 +13,7 @@ public class GerenciadorDeVeiculos {
             throw new IllegalArgumentException("Um veículo com a mesma placa já está cadastrado na base.");
 
         Veiculo novoVeiculo = new Veiculo(fabricante, modelo, pinturaCor, placa, tipoVeiculo);
-        dadosDeLivros.salvar(novoVeiculo);
+        dadosDeVeiculos.salvar(novoVeiculo);
 
         return novoVeiculo;
     }
@@ -24,13 +24,13 @@ public class GerenciadorDeVeiculos {
 
         Veiculo veiculoEditado = buscarVeiculoExato(placa);
         veiculoEditado.setPinturaCor(pinturaCor);
-        dadosDeLivros.atualizar(veiculoEditado);
+        dadosDeVeiculos.atualizar(veiculoEditado);
 
         return veiculoEditado;
     }
 
     public Veiculo buscarVeiculoExato(String placa) {
-        return dadosDeLivros.consultar(placa);
+        return dadosDeVeiculos.consultar(placa);
     }
 
     public List<Veiculo> buscarModeloVeiculos(String busca) {
@@ -44,14 +44,14 @@ public class GerenciadorDeVeiculos {
     }
 
     public boolean existeVeiculo(String placa) {
-        return dadosDeLivros.consultar(placa) != null;
+        return dadosDeVeiculos.consultar(placa) != null;
     }
 
     public boolean removerVeiculo(String placa) {
-        return dadosDeLivros.deletar(placa);
+        return dadosDeVeiculos.deletar(placa);
     }
 
     public List<Veiculo> listarTodos() {
-        return dadosDeLivros.listarTodos();
+        return dadosDeVeiculos.listarTodos();
     }
 }

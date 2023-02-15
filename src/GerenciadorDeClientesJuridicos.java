@@ -1,9 +1,9 @@
 import java.util.List;
 
 public class GerenciadorDeClientesJuridicos {
-    private final BancoDeDados<PessoaJuridica> dadosDeClientesJuridicos;
+    private final BancoDeDadosInterface<PessoaJuridica> dadosDeClientesJuridicos;
 
-    public GerenciadorDeClientesJuridicos(BancoDeDados<PessoaJuridica> dadosDeClientesJuridicos) {
+    public GerenciadorDeClientesJuridicos(BancoDeDadosInterface<PessoaJuridica> dadosDeClientesJuridicos) {
         this.dadosDeClientesJuridicos = dadosDeClientesJuridicos;
     }
 
