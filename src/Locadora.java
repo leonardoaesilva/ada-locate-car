@@ -17,16 +17,16 @@ public class Locadora {
         clientesFisicos.adcCliente("Leo", "123");
 
         veiculos.adcVeiculo("Ford", "KA", "Vermelho", "ASO9021", TipoVeiculo.Pequeno);
-        veiculos.adcVeiculo("Ford", "Focus", "Preto", "ASO9022", TipoVeiculo.Pequeno);
+        veiculos.adcVeiculo("Ford", "Focus", "Preto", "ASO9022", TipoVeiculo.Medio);
         veiculos.adcVeiculo("Ford", "Focus", "Prata", "ASO9023", TipoVeiculo.Medio);
 
         alugueis.alugarVeiculo(clientesFisicos.buscarCliente("123"),
                 LocalDateTime.of(1997, Month.MAY, 13, 18, 30),
                 LocalDateTime.of(1997, Month.MAY, 18, 18, 30),
                 veiculos.buscarVeiculoExato("ASO9021"));
-        System.out.println();
 
-//        veiculos.buscarModeloVeiculos("Fo").forEach(System.out::println);
+        System.out.println("################# BUSCANDO VEÍCULOS DE MODELO 'Fo'");
+        veiculos.buscarModeloVeiculos("Fo").forEach(System.out::println);
         System.out.println("################# TODOS OS VEÍCULOS");
         veiculos.listarTodos().forEach(System.out::println);
         System.out.println("################# ALUGUÉIS VIGENTES");
