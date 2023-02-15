@@ -56,4 +56,8 @@ public class Veiculo implements InterfaceEntidade {
     public void setPinturaCor(String pinturaCor) {
         this.pinturaCor = pinturaCor;
     }
+
+    public TipoVeiculo getTipoVeiculo() {
+        return tipoVeiculo;
+    }
 }

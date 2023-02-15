@@ -24,6 +24,7 @@ public class Locadora {
                 LocalDateTime.of(1997, Month.MAY, 13, 18, 30),
                 LocalDateTime.of(1997, Month.MAY, 18, 18, 30),
                 veiculos.buscarVeiculoExato("ASO9021"));
+        System.out.println();
 
 //        veiculos.buscarModeloVeiculos("Fo").forEach(System.out::println);
         System.out.println("################# TODOS OS VEÍCULOS");
@@ -32,6 +33,14 @@ public class Locadora {
         alugueis.listarTodos().forEach(System.out::println);
         System.out.println("################# TODOS OS VEÍCULOS");
         veiculos.listarTodos().forEach(System.out::println);
+        System.out.println("################# VEÍCULOS DISPONÍVEIS PARA ALUGUEL");
+        veiculos.listarDisponiveis().forEach(System.out::println);
+
+        alugueis.devolverVeiculo(clientesFisicos.buscarCliente("123"),
+                LocalDateTime.of(1997, Month.MAY, 13, 18, 30),
+                LocalDateTime.of(1997, Month.MAY, 18, 18, 30),
+                veiculos.buscarVeiculoExato("ASO9021"));
+
         System.out.println("################# VEÍCULOS DISPONÍVEIS PARA ALUGUEL");
         veiculos.listarDisponiveis().forEach(System.out::println);
     }

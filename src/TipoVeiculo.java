@@ -1,9 +1,9 @@
 import java.math.BigDecimal;
 
 public enum TipoVeiculo {
-    Pequeno(new BigDecimal("100.0")),
-    Medio(new BigDecimal("150.0")),
-    SUV(new BigDecimal("200.0"));
+    Pequeno(BigDecimal.valueOf(100.0)),
+    Medio(BigDecimal.valueOf(150.0)),
+    SUV(BigDecimal.valueOf(200.0));
 
     public BigDecimal valorAluguelDiario;
 
