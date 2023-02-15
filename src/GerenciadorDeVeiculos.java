@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GerenciadorDeVeiculos {
-    private final BancoDeDadosInterface<Veiculo> dadosDeVeiculos;
+    private final InterfaceDeDados<Veiculo> dadosDeVeiculos;
 
-    public GerenciadorDeVeiculos(BancoDeDadosInterface<Veiculo> dadosDeVeiculos) {
+    public GerenciadorDeVeiculos(InterfaceDeDados<Veiculo> dadosDeVeiculos) {
         this.dadosDeVeiculos = dadosDeVeiculos;
     }
 

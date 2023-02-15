@@ -1,5 +1,5 @@
-public class Veiculo implements EntidadeInterface {
-    private Boolean isLocado;
+public class Veiculo implements InterfaceEntidade {
+    private Boolean isAlugado;
     private String fabricante;
     private String modelo;
     private String pinturaCor;
@@ -7,7 +7,7 @@ public class Veiculo implements EntidadeInterface {
     private TipoVeiculo tipoVeiculo;
 
     public Veiculo(String fabricante, String modelo, String pinturaCor, String placa, TipoVeiculo tipoVeiculo) {
-        this.isLocado = false;
+        this.isAlugado = false;
         this.fabricante = fabricante;
         this.modelo = modelo;
         this.pinturaCor = pinturaCor;
@@ -24,7 +24,7 @@ public class Veiculo implements EntidadeInterface {
                 ", placa='" + placa + '\'' +
                 ", tipoVeiculo='" + tipoVeiculo + '\'' +
                 ", valorAluguelDiario='R$" + tipoVeiculo.getValorAluguelDiario() + '\'' +
-                ", alugado='" + isLocado + '\'' +
+                ", alugado='" + isAlugado + '\'' +
                 '}';
     }
 
@@ -33,12 +33,12 @@ public class Veiculo implements EntidadeInterface {
         return placa;
     }
 
-    public Boolean getIsLocado() {
-        return isLocado;
+    public Boolean getIsAlugado() {
+        return isAlugado;
     }
 
-    public void setIsLocado(Boolean isLocado) {
-        this.isLocado = isLocado;
+    public void setIsAlugado(Boolean isAlugado) {
+        this.isAlugado = isAlugado;
     }
 
     public String getFabricante() {

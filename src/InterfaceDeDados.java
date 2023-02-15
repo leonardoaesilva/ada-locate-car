@@ -1,6 +1,6 @@
 import java.util.List;
 
-public interface BancoDeDadosInterface<T> {
+public interface InterfaceDeDados<T> {
     T salvar(T entidade);
     void atualizar(T entidade);
     boolean deletar(String id);

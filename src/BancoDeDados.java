@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class BancoDeDados<T extends EntidadeInterface> implements BancoDeDadosInterface<T> {
+public class BancoDeDados<T extends InterfaceEntidade> implements InterfaceDeDados<T> {
     private final List<T> dados;
 
     public BancoDeDados() {

@@ -1,7 +1,7 @@
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class Aluguel implements EntidadeInterface, Serializable {
+public class Aluguel implements InterfaceEntidade, Serializable {
     private static final Long serialVersionUID = 1L;
     private Cliente cliente;
     private LocalDateTime dataAluguel;
@@ -18,7 +18,7 @@ public class Aluguel implements EntidadeInterface, Serializable {
     @Override
     public String toString() {
         return "Aluguel{" +
-                "cliente=" + cliente +
+                "cliente=" + cliente.getNome() +
                 ", dataAluguel=" + dataAluguel +
                 ", dataDevolucao=" + dataDevolucao +
                 ", veiculo=" + veiculo +

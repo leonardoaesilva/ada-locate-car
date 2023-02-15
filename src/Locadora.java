@@ -1,8 +1,8 @@
 public class Locadora {
     public static void main(String[] args) {
-        BancoDeDadosInterface<PessoaFisica> bancoDeClientesFisicos = new BancoDeDados<>();
-        BancoDeDadosInterface<PessoaJuridica> bancoDeClientesJuridicos = new BancoDeDados<>();
-        BancoDeDadosInterface<Veiculo> bancoDeVeiculos = new BancoDeDados<>();
+        InterfaceDeDados<PessoaFisica> bancoDeClientesFisicos = new BancoDeDados<>();
+        InterfaceDeDados<PessoaJuridica> bancoDeClientesJuridicos = new BancoDeDados<>();
+        InterfaceDeDados<Veiculo> bancoDeVeiculos = new BancoDeDados<>();
 
         GerenciadorDeClientesFisicos clientesFisicos = new GerenciadorDeClientesFisicos(bancoDeClientesFisicos);
         GerenciadorDeClientesJuridicos clientesJuridicos = new GerenciadorDeClientesJuridicos(bancoDeClientesJuridicos);
